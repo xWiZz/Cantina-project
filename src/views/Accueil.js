@@ -5,6 +5,7 @@ import Card from "../components/Card";
 function Accueil() {
   const [recettes, setRecettes] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  // const [timeCheck, setTimeCheck ] = useState("");
 
   useEffect(() => {
     fetch("http://localhost:9000/api/recipes")
@@ -14,16 +15,16 @@ function Accueil() {
       });
   }, []);
 
-  console.log(recettes);
-
   const handleSearchTerm = (e) => {
     let value = e.target.value;
     setSearchTerm(value);
   };
 
+
   return (
     <div className="AppContent">
       <div className="searchBar">
+      <h1>Bienvenue sur Cantina</h1>
         <input
           type="text"
           name="searchBar"
@@ -32,6 +33,11 @@ function Accueil() {
           onChange={handleSearchTerm}
         />
       </div>
+
+      <div className="filter">
+        
+      </div>
+
       <div className="searchResults">
         {recettes &&
           recettes
@@ -43,7 +49,7 @@ function Accueil() {
             .map((val) => {
               return (
                 <div className="searchResult" key={val.id}>
-                  <Card key={val.id} test={val} />
+                  <Card key={val.id} recette={val} />
                 </div>
               );
             })}
