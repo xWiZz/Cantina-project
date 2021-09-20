@@ -1,12 +1,12 @@
-import './App.css';
-import './components/Card.css';
-import {BrowserRouter, NavLink, Route} from 'react-router-dom';
+import "./App.css";
+import "./components/Card.css";
+import { BrowserRouter, NavLink, Route } from "react-router-dom";
 
-import Recette from './views/Recette';
-import Accueil from './views/Accueil';
-import nouvelleRecette from './views/NouvelleRecette';
-import ModifRecette from './views/ModifRecette';
-import Logo from './assets/Cantina-logo.png';
+import Recette from "./views/Recette";
+import Accueil from "./views/Accueil";
+import nouvelleRecette from "./views/NouvelleRecette";
+import ModifRecette from "./views/ModifRecette";
+import Logo from "./assets/Cantina-logo.png";
 
 function App() {
   return (
@@ -14,9 +14,23 @@ function App() {
       <div className="App">
         <header>
           <ul>
-            <li> <img src={Logo} alt="" /></li>
-            <li><NavLink to ="/" exact>Liste des recettes</NavLink></li>
-            <li id="addNavButton"><NavLink to ="/NouvelleRecette/" >Ajouter</NavLink></li>
+            <li>
+              <NavLink to="/">
+                <img src={Logo} alt="" />
+              </NavLink>
+            </li>
+            <div className="">
+            <li>
+              <NavLink to="/" exact>
+                Liste des recettes
+              </NavLink>
+            </li>
+            <li id="addNavButton">
+              <NavLink to="/NouvelleRecette/">
+                Ajouter une nouvelle recette
+              </NavLink>
+            </li>
+            </div>
           </ul>
         </header>
 

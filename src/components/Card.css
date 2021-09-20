@@ -1,7 +1,35 @@
-.CardContent{
-
+.CardContent {
 }
 
-.CardContent a div.cardDesign img{
-    width: 100%;
-  }
+.CardContent a div.cardDesign img {
+  width: 100%;
+}
+
+.CardContent a button{
+  padding: 6px 12px;
+  color: #fff;
+  background-color: rgb(34, 88, 197);
+  appearance: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.CardContent .btnPopup{
+  padding: 6px 12px;
+  color: #fff;
+  background-color: rgb(235, 50, 35);
+  appearance: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.CardContent .buttonCardEdit{
+  display: flex;
+  justify-content: center;
+}
+
+.CardContent .buttonCardEdit a{
+  margin-right: 10px;
+}

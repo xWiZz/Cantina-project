@@ -14,6 +14,10 @@ html {
   text-decoration: none;
 }
 
+body.activePopup {
+  overflow-y: hidden;
+}
+
 .App header {
   background-color: white;
 }
@@ -42,10 +46,14 @@ html {
   list-style: none;
 }
 
-.App header ul li:first-of-type {
+.App header ul li:first-of-type a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.App header ul div {
+  display: flex;
 }
 
 #addNavButton {
@@ -54,7 +62,7 @@ html {
 }
 
 .searchBar {
-  height: calc(100vh - 80px);
+  height: calc(100vh - 350px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,4 +95,37 @@ html {
 .searchResults .searchResult {
   width: 400px;
   margin: 0 50px;
+}
+
+.editRecetteForm {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+
+.editRecetteForm .itemsForm {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.editRecetteForm .itemsForm input,
+textarea,
+select {
+  padding: 6px 12px;
+  color: rgb(73, 80, 87);
+}
+
+.editRecetteForm label {
+  margin-bottom: 8px;
+}
+
+.editRecetteForm button {
+  padding: 6px 12px;
+  color: #fff;
+  background-color: rgb(34, 88, 197);
+  appearance: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
 }

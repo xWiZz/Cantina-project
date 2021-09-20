@@ -5,7 +5,6 @@ import Card from "../components/Card";
 function Accueil() {
   const [recettes, setRecettes] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  // const [timeCheck, setTimeCheck ] = useState("");
 
   useEffect(() => {
     fetch("http://localhost:9000/api/recipes")
@@ -20,11 +19,10 @@ function Accueil() {
     setSearchTerm(value);
   };
 
-
   return (
     <div className="AppContent">
       <div className="searchBar">
-      <h1>Bienvenue sur Cantina</h1>
+        <h1>Bienvenue sur Cantina</h1>
         <input
           type="text"
           name="searchBar"
@@ -34,9 +32,7 @@ function Accueil() {
         />
       </div>
 
-      <div className="filter">
-        
-      </div>
+      <div className="filter"></div>
 
       <div className="searchResults">
         {recettes &&
