@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-function ModifRecette() {
+function ModifRecette(props) {
   const param = useParams();
   const id = param.id;
 

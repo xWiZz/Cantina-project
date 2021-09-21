@@ -30,6 +30,30 @@ function Accueil() {
           placeholder="Rechercher une recette"
           onChange={handleSearchTerm}
         />
+        <div className="searchFilterInput">
+          <select>
+            <option>Difficulté</option>
+            <option>Padawan</option>
+            <option>Jedi</option>
+            <option>Maitre</option>
+          </select>
+          <select>
+            <option>Nombre de personnes</option>
+            <option>1 à 2</option>
+            <option>2 à 4</option>
+            <option>4 à 6</option>
+            <option>6 à 8</option>
+            <option>8 à 10</option>
+          </select>
+          <select>
+            <option>Temps de préparation</option>
+            <option>Moins de 15 minutes</option>
+            <option>Moins de 30 minutes</option>
+            <option>Moins de 45 minutes</option>
+            <option>Moins de 1 heure</option>
+            <option>Plus de 1 heure</option>
+          </select>
+        </div>
       </div>
 
       <div className="filter"></div>

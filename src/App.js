@@ -1,5 +1,7 @@
 import "./App.css";
 import "./components/Card.css";
+import "./menu.css";
+
 import { BrowserRouter, NavLink, Route } from "react-router-dom";
 
 import Recette from "./views/Recette";
@@ -13,25 +15,31 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <header>
-          <ul>
-            <li>
-              <NavLink to="/">
-                <img src={Logo} alt="" />
-              </NavLink>
-            </li>
-            <div className="">
-            <li>
-              <NavLink to="/" exact>
-                Liste des recettes
-              </NavLink>
-            </li>
-            <li id="addNavButton">
-              <NavLink to="/NouvelleRecette/">
-                Ajouter une nouvelle recette
-              </NavLink>
-            </li>
-            </div>
-          </ul>
+          <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+              <li>
+                <NavLink to="/">
+                  <img src={Logo} alt="" />
+                </NavLink>
+              </li>
+              <div className="">
+                <li>
+                  <NavLink to="/" exact>
+                    Liste des recettes
+                  </NavLink>
+                </li>
+                <li id="addNavButton">
+                  <NavLink to="/NouvelleRecette/">
+                    Ajouter une nouvelle recette
+                  </NavLink>
+                </li>
+              </div>
+            </ul>
+          </div>
         </header>
 
         <Route path="/" component={Accueil} exact />

@@ -16,7 +16,7 @@ function Popup(props) {
   }
 
   return (
-    <div className="" key={data.id}>
+    <div className="">
       <button onClick={togglePopup} className="btnPopup" open>
         Supprimer
       </button>

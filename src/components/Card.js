@@ -16,7 +16,7 @@ function Card(props) {
           <p>Niveau : {recette.niveau}</p>
           <p>Nombre de personne : {recette.personnes}</p>
           <p>Description : {recette.description}</p>
-          <p>Temps de préparation : {recette.tempsPreparation}</p>
+          <p>Temps de préparation : {recette.tempsPreparation} minutes</p>
         </div>
       </Link>
       <div className="buttonCardEdit">

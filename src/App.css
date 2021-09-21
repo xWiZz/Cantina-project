@@ -14,6 +14,10 @@ html {
   text-decoration: none;
 }
 
+* textarea {
+  font-family: sans-serif;
+}
+
 body.activePopup {
   overflow-y: hidden;
 }
@@ -55,6 +59,9 @@ body.activePopup {
 .App header ul div {
   display: flex;
 }
+#menuToggle > input {
+  display: none;
+}
 
 #addNavButton {
   position: absolute;
@@ -83,30 +90,41 @@ body.activePopup {
   padding: 0px 20px;
 }
 
+.searchFilterInput {
+  margin-top: 20px;
+}
+
+.searchFilterInput select {
+  border-radius: 25px;
+}
+
 .searchResults {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   max-width: 95%;
   margin: auto;
+  margin-top: 50px;
   justify-content: space-evenly;
 }
 
 .searchResults .searchResult {
   width: 400px;
   margin: 0 50px;
+  margin-bottom: 50px;
 }
 
 .editRecetteForm {
   width: 100%;
   max-width: 500px;
-  margin: auto;
+  margin: 50px auto;
 }
 
 .editRecetteForm .itemsForm {
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
+  width: 100%;
 }
 
 .editRecetteForm .itemsForm input,
@@ -120,6 +138,44 @@ select {
   margin-bottom: 8px;
 }
 
+.editForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.editForm .listToAdd {
+  width: 100%;
+}
+
+.editForm .listToAdd .itemsForm input,
+textarea,
+select {
+  margin-bottom: 16px;
+}
+
+.editForm .listToAdd .itemsForm button {
+  width: 100px;
+  margin: auto;
+}
+
+.editRecetteForm button {
+  width: 100px;
+  margin: auto;
+}
+
+#elements{
+  margin-bottom: 16px;
+}
+#name-elements{
+  margin-bottom: 16px;
+}
+
+.editForm .itemsForm textarea#steps {
+  min-height: 150px;
+}
+
 .editRecetteForm button {
   padding: 6px 12px;
   color: #fff;
@@ -128,4 +184,50 @@ select {
   border: none;
   font-size: 16px;
   cursor: pointer;
+}
+
+.CardContent .buttonCardEdit{
+  position: unset;
+}
+
+.buttonCardEdit{
+  display: flex;
+  justify-content: right;
+  right: 50px;
+  position: absolute;
+}
+.buttonCardEdit a button{
+  padding: 6px 12px;
+  color: #fff;
+  background-color: rgb(34, 88, 197);
+  appearance: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.buttonCardEdit div button{
+  padding: 6px 12px;
+  color: #fff;
+  background-color: rgb(235, 50, 35);
+  appearance: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.recetteResume ul{
+  padding: 0;
+}
+
+.recetteResume ul li{
+  list-style: none;
+}
+
+.recetteResume textarea{
+  width: 100%;
+  max-width: 600px;
+  min-height: 150px;
+  max-height: 150px;
 }
